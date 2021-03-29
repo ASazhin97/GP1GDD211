@@ -9,8 +9,11 @@ public class UI_Inventory : MonoBehaviour
     public Transform itemSlotContainer;
     public Transform itemSlotTemplate;
     public Image sprite;
-
+    public GameObject button1;
+    public GameObject button2;
    
+
+
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
@@ -38,11 +41,15 @@ public class UI_Inventory : MonoBehaviour
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemsSlotCellSize, y * itemsSlotCellSize);
             Image image = sprite.GetComponent<Image>();
+            button1.SetActive(true);
+            button2.SetActive(true);
             image.sprite = item.GetSprite();
             y-=3;
             amount++;
+         
 
-            
+
+
         }
     }
 }

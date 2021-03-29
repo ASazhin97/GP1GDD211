@@ -24,9 +24,10 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Colliding");
             inventory.AddItem(itemWorld.GetItem());
-            itemWorld.DestroySelf();
             button1.SetActive(true);
             button2.SetActive(true);
+            itemWorld.DestroySelf();
+
         }
     }
 }
